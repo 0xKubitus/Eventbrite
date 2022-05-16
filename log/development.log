@@ -2258,3 +2258,7 @@ Migrating to CreateAttendances (20220516133329)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
   [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
