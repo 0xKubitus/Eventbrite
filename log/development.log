@@ -2607,3 +2607,86 @@ ita@yopmail.com.=0D
 ----==_mimepart_6282bfbf831d8_49e9256c21323--
 
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "preuffosizuka-3381@yopmail.com"], ["first_name", "juanitaz"], ["created_at", "2022-05-16 21:21:33.708239"], ["updated_at", "2022-05-16 21:21:33.708239"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.2ms)
+UserMailer#welcome_email: processed outbound mail in 17.4ms
+Sent mail to preuffosizuka-3381@yopmail.com (483.8ms)
+Date: Mon, 16 May 2022 23:21:33 +0200
+From: no-reply@monsite.fr
+To: preuffosizuka-3381@yopmail.com
+Message-ID: <6282c05db2a53_4d61256c21493@kubitus-PCmaison.mail>
+Subject: =?UTF-8?Q?Bienvenue_chez_The_Events_Project_by_Kubitus_!_=28compte?=
+ =?UTF-8?Q?_utilisateur_cr=C3=A9=C3=A9=29?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6282c05db2155_4d61256c2139b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6282c05db2155_4d61256c2139b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQganVhbml0YXogZXQgYmllbnZlbnVlIGNoZXogVGhlIEV2ZW50cyBQ
+cm9qZWN0IGJ5IEt1Yml0dXMgIQ0KPT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KIA0KVHUgdCdl
+cyBpbnNjcml0IHN1ciBtb25zaXRlLmZyIGVuIHV0aWxpc2FudCBsJ2UtbWFp
+bCBzdWl2YW50IDogcHJldWZmb3NpenVrYS0zMzgxQHlvcG1haWwuY29tLg0K
+IA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVudCwgY29ubmVj
+dGUtdG9pIHZpYSA6IGh0dHA6Ly9tb25zaXRlLmZyL2xvZ2luLg0KIA0Kw4Ag
+dHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_6282c05db2155_4d61256c2139b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <h1>Salut juanitaz et bienvenue chez The Events Project by Kubitus !<=
+/h1>=0D
+=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : preu=
+ffosizuka-3381@yopmail.com.=0D
+    </p>=0D
+=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_6282c05db2155_4d61256c2139b--
+
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
