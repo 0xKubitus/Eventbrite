@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
     @user = user 
 
     #on définit une variable @url qu'on utilisera dans la view d’e-mail
-    @url  = 'https://eventbrite-nico.herokuapp.com/' # <= l'adresse de mon site
+    @url  = 'https://eventbrite-nico.herokuapp.com/' # <= page d'accueil mon site, à modifier
 
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
     mail(to: @user.email, subject: 'Bienvenue chez The Events Project by Kubitus ! (compte utilisateur créé)') 
