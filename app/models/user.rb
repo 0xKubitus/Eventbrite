@@ -19,7 +19,7 @@ class User < ApplicationRecord
     #petit test pour voir ds. le terminal si la methode fonctionne :
     puts " "
     puts "="*50
-    puts "l'email devrait être bien envoyé à #{@self.first_name}"
+    puts "l'email devrait être bien envoyé au user"
     puts "="*50
     puts " "
   end
