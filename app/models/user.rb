@@ -15,11 +15,11 @@ class User < ApplicationRecord
   def welcome_send
 
     UserMailer.welcome_email(self).deliver_now #on utilise 'self' car ce qui nous intéresse est l'instance du user nouvellement créé
-    
+
     #petit test pour voir ds. le terminal si la methode fonctionne :
     puts " "
     puts "="*50
-    puts "l'email devrait être bien envoyé à #{@user.email}"
+    puts "l'email devrait être bien envoyé à #{@self.first_name}"
     puts "="*50
     puts " "
   end
