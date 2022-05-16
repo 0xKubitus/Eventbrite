@@ -3,8 +3,8 @@ Event.destroy_all
 Attendance.destroy_all
 
 
-
-10.times do |i|
+# users :
+30.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -14,9 +14,24 @@ Attendance.destroy_all
   )
 end
 
+# events :
+10.times do |i|
+  event = Event.new(
+    title: Faker::Fantasy::Tolkien.poem,
+    description: Faker::Lorem.sentences(number: 2),
+    location: Faker::Fantasy::Tolkien.location,
+    start_date: Faker::Date.between(from: Date.today, to: 3.year.from_now),
+    duration: (rand(1..2016) * 5), # <- 2016 x 5 = 10080 = 7 x 24 x 60 = nbre de minutes dans 7 jours
+    price: rand(1..1500)
+  )
+  event.admin = User.all.sample # uniquement pour le debut pour tester les migrations et relations entre les objets
+  event.save
+end
+
+# attendances :
+Event.all.each do |event|
+  x = rand(0..30)
+  x.times { Attendance.create(event: event, attendee: User.all.sample) }
+end
 
 
-
-# Faker::Fantasy::Tolkien.location
-
-# Faker::Fantasy::Tolkien.poem
