@@ -4,7 +4,7 @@ Attendance.destroy_all
 
 
 # users :
-30.times do |i|
+5.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -15,7 +15,7 @@ Attendance.destroy_all
 end
 
 # events :
-10.times do |i|
+3.times do |i|
   event = Event.new(
     title: Faker::Fantasy::Tolkien.poem,
     description: Faker::Lorem.sentences(number: 2),
@@ -30,7 +30,7 @@ end
 
 # attendances :
 Event.all.each do |event|
-  x = rand(0..30)
+  x = rand(0..5)
   x.times { Attendance.create(event: event, attendee: User.all.sample) }
 end
 
